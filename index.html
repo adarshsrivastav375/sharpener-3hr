@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Rating Project</title>
+    <style>
+      .rating {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .rating li {
+        color: #ffd600;
+        font-size: 30px;
+      }
+      .rating span {
+        font-size: 18px;
+        color: black;
+      }
+      .user-list div {
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Ratings</h1>
-    <ul>
-      <li>* <span id="1Star"></span></li>
-      <li>** <span id="2Star"></span></li>
-      <li>*** <span id="3Star"></span></li>
-      <li>**** <span id="4Star"></span></li>
-      <li>***** <span id="5Star"></span></li>
+    <h2>Ratings</h2>
+    <ul class="rating">
+      <li>* <span id="1star"></span></li>
+      <li>** <span id="2star"></span></li>
+      <li>*** <span id="3star"></span></li>
+      <li>**** <span id="4star"></span></li>
+      <li>***** <span id="5star"></span></li>
     </ul>
-    <form action="" id="form">
-      <label for="name"> name</label>
-      <input type="text" placeholder="enter name" id="name" />
-      <label for="rating"> rate</label>
-      <select name="rating" id="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <input type="submit" value="submit" id="submit" />
+    <br />
+    <hr />
+    <br />
+    <form id="rating-form">
+      <label> Name: <input type="text" id="name-input" required /> </label>
+      <label>
+        Rate:
+        <select id="rating-select" required>
+          <option value="">Select rating</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+      <button type="submit" id="submit">Submit</button>
     </form>
-    <ol id="user-list"></ol>
-    <script src="index.js"></script>
+    <br />
+    <div id="user-list"></div>
+     <script src="index.js"></script>
   </body>
 </html>
